@@ -7,8 +7,12 @@ export default function ProductList({ className = '', products }) {
     <ul className={`${styles.productList} ${className}`}>
       {products?.map((product) => (
         <li key={product.id}>
-          <Link className={styles.product} href={`/products/${product.id}`}>
-            <img className={styles.image} src={product.imgUrl} alt={product.name} />
+          <Link className={styles.product} href={`/items/${product.id}`}>
+            <img
+              className={styles.image}
+              src={product.imgUrl}
+              alt={product.name}
+            />
             <div className={styles.content}>
               <div>
                 <span className={styles.name}>{product.name}</span>
@@ -26,8 +30,7 @@ export default function ProductList({ className = '', products }) {
                   {product.starRatingCount.toLocaleString()}
                 </div>
                 <div className={styles.likeCount}>
-                  ♥
-                  {product.likeCount.toLocaleString()}
+                  ♥{product.likeCount.toLocaleString()}
                 </div>
               </div>
             </div>
