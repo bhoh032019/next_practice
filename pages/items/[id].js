@@ -4,8 +4,6 @@ import axios from '@/lib/axios';
 import styles from '@/styles/Product.module.css';
 import SizeReviewList from '@/components/SizeReviewList';
 import StarRating from '@/components/StarRating';
-import Header from '@/components/Header';
-import Container from '@/components/Container';
 
 export default function Product() {
   const [product, setProduct] = useState();
